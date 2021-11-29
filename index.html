@@ -38,7 +38,7 @@
 
       <!-- Container Input -->
       <div id="input-box">
-        <input type="text" v-model="inputText">
+        <input type="text" v-model="inputText" @keypress.enter="addEl()">
         <button @click="addEl()">Add</button>
       </div>
 
