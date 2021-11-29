@@ -45,8 +45,8 @@
       <!-- Container lista -->
       <div id="list-box">
         <ul>
-          <li v-for="(el, index) in todo" @click="changeDone(index)">
-            <span :class="el.done ? 'deleted' : '' ">{{el.text}}</span>
+          <li v-for="(el, index) in todo">
+            <span :class="el.done ? 'deleted' : '' " @click="changeDone(index)">{{el.text}}</span>
             <i class="fas fa-times" @click="removeEl(index)"></i>
           </li>
           <li v-if="todo.length == 0">
