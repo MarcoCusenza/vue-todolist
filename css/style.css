@@ -72,7 +72,7 @@ main h1{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.2rem;
+  padding: .9375rem;
   border-bottom: 2px solid grey;
   user-select: none;
   cursor: pointer;
@@ -84,6 +84,22 @@ main h1{
 
 #list-box li i{
   cursor: pointer;
+  width: 5%;
+}
+
+#list-box li span{
+  width: 95%;
+  padding: 5px;
+  text-align: left;
+}
+
+#list-box li span:hover{
+  background-color: lightgrey;
+  border-radius: 10px;
+}
+
+#list-box li #noEl:hover{
+  background: none;
 }
 
 #list-box li span.deleted{
