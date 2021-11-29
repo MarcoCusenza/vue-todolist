@@ -74,6 +74,8 @@ main h1{
   align-items: center;
   padding: 1.2rem;
   border-bottom: 2px solid grey;
+  user-select: none;
+  cursor: pointer;
 }
 
 #list-box li:last-of-type{

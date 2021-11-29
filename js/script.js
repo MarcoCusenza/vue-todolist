@@ -33,6 +33,13 @@ const app = new Vue({
         alert("Inserisci del testo prima di aggiungere");
       }
       this.inputText = '';
-    }
+    },
+    changeDone: function (i) {
+      if (this.todo[i].done) {
+        this.todo[i].done = false;
+      } else {
+        this.todo[i].done = true;
+      }
+    },
   },
 });
