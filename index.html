@@ -13,11 +13,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
 
+  <!-- FONTAWESOME CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <!-- MYCSS -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+  <div id="root"></div>
   <!-- HEADER -->
   <header>
     <img src="https://www.boolean.careers/images/misc/logo.png" alt="Boolean Logo">
@@ -27,6 +33,7 @@
 
   <!-- MAIN -->
   <main>
+
     <h1>Todo List</h1>
 
     <!-- Container Input -->
@@ -38,13 +45,19 @@
     <!-- Container lista -->
     <div id="list-box">
       <ul>
-        <li>Fare la spesa</li>
-        <li>Portare fuori il cane</li>
+        <li>
+          <span>Fare la spesa</span>
+          <i class="fas fa-times"></i>
+        </li>
+        <li>
+          <span>Portare fuori il cane</span>
+          <i class="fas fa-times"></i>
+        </li>
       </ul>
     </div>
   </main>
   <!-- /MAIN -->
-
+  </div>
 
 
   <!-- VUE JS development version, includes helpful console warnings -->
