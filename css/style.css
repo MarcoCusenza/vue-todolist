@@ -60,7 +60,7 @@ main h1{
   border-radius: 10px;
   width: 70%;
   min-width: 18.75rem;
-  margin: 0 auto;
+  margin: 1rem auto;
 }
 
 #list-box ul{
@@ -78,6 +78,14 @@ main h1{
 
 #list-box li:last-of-type{
   border: none;
+}
+
+#list-box li i{
+  cursor: pointer;
+}
+
+#list-box li span.deleted{
+  text-decoration: line-through;
 }
 /* /List */
 

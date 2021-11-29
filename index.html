@@ -23,40 +23,39 @@
 </head>
 
 <body>
-  <div id="root"></div>
-  <!-- HEADER -->
-  <header>
-    <img src="https://www.boolean.careers/images/misc/logo.png" alt="Boolean Logo">
-  </header>
-  <!-- /HEADER -->
+  <div id="root">
+    <!-- HEADER -->
+    <header>
+      <img src="https://www.boolean.careers/images/misc/logo.png" alt="Boolean Logo">
+    </header>
+    <!-- /HEADER -->
 
 
-  <!-- MAIN -->
-  <main>
+    <!-- MAIN -->
+    <main>
 
-    <h1>Todo List</h1>
+      <h1>Todo List</h1>
 
-    <!-- Container Input -->
-    <div id="input-box">
-      <input type="text">
-      <button>Add</button>
-    </div>
+      <!-- Container Input -->
+      <div id="input-box">
+        <input type="text" v-model="inputText">
+        <button @click="addEl()">Add</button>
+      </div>
 
-    <!-- Container lista -->
-    <div id="list-box">
-      <ul>
-        <li>
-          <span>Fare la spesa</span>
-          <i class="fas fa-times"></i>
-        </li>
-        <li>
-          <span>Portare fuori il cane</span>
-          <i class="fas fa-times"></i>
-        </li>
-      </ul>
-    </div>
-  </main>
-  <!-- /MAIN -->
+      <!-- Container lista -->
+      <div id="list-box">
+        <ul>
+          <li v-for="(el, index) in todo">
+            <span :class="el.done ? 'deleted' : '' ">{{el.text}}</span>
+            <i class="fas fa-times" @click="removeEl(index)"></i>
+          </li>
+          <li v-if="todo.length == 0">
+            <span>Non hai cose da fare</span>
+          </li>
+        </ul>
+      </div>
+    </main>
+    <!-- /MAIN -->
   </div>
 
 
